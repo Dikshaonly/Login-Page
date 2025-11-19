@@ -26,9 +26,15 @@
 </label>
 </div>
 <input type="submit" value="Login" class="btn btn-success w-100 p-2">
-<div class="text-center">
-<a asp-controller="Home" asp-action="Index" class="text-decoretion none mt-3">Back</a>
+<p class="text-center mt-2">Don't have an account?
+<a asp-controller="Account" asp-action="Register" class="text-decoration-none">Register</a>
+</p>
+<div class="text-center mt-2">
+<a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3">Back</a>
 </div>
 </form>
 </div>
 </div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial">
+}
