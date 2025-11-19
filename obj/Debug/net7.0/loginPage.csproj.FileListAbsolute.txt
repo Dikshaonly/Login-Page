@@ -37,8 +37,6 @@
 /Users/user/Desktop/loginPage/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/user/Desktop/loginPage/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/user/Desktop/loginPage/bin/Debug/net7.0/Mono.TextTemplating.dll
-/Users/user/Desktop/loginPage/bin/Debug/net7.0/MySqlConnector.dll
-/Users/user/Desktop/loginPage/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/user/Desktop/loginPage/bin/Debug/net7.0/System.CodeDom.dll
 /Users/user/Desktop/loginPage/obj/Debug/net7.0/loginPage.csproj.CopyComplete
 /Users/user/Desktop/loginPage/bin/Debug/net7.0/Azure.Core.dll

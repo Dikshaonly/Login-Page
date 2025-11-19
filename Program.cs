@@ -1,6 +1,6 @@
 using loginPage.Models;
 using loginPage.Data;
-using Pomelo.EntityFrameworkCore.MySql;
+using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 21))));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
     
 builder.Services.AddIdentity<Users, IdentityRole>(options=>
 {
