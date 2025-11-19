@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ocx4AtsD4NZcYxMUGqstb69zsRr9ymCRjMTUgxoccDo=",
+  "Hash": "7jYnQvBmkY3q7yNvKDbP90hoDSGz4SrChhV7d07dzd0=",
   "Source": "loginPage",
   "BasePath": "_content/loginPage",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "/Users/user/Desktop/loginPage/obj/Debug/net7.0/scopedcss/projectbundle/loginPage.bundle.scp.css"
     },
     {
+      "Identity": "/Users/user/Desktop/loginPage/wwwroot/css/account.css",
+      "SourceId": "loginPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/user/Desktop/loginPage/wwwroot/",
+      "BasePath": "_content/loginPage",
+      "RelativePath": "css/account.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/account.css"
+    },
+    {
       "Identity": "/Users/user/Desktop/loginPage/wwwroot/css/site.css",
       "SourceId": "loginPage",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/user/Desktop/loginPage/wwwroot/Images/_ (1).jpeg",
+      "SourceId": "loginPage",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/user/Desktop/loginPage/wwwroot/",
+      "BasePath": "_content/loginPage",
+      "RelativePath": "Images/_ (1).jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/_ (1).jpeg"
     },
     {
       "Identity": "/Users/user/Desktop/loginPage/wwwroot/js/site.js",

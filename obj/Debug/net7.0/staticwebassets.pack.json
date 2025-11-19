@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets/loginPage.bundle.scp.css"
     },
     {
+      "Id": "/Users/user/Desktop/loginPage/wwwroot/Images/_ (1).jpeg",
+      "PackagePath": "staticwebassets/Images/_ (1).jpeg"
+    },
+    {
+      "Id": "/Users/user/Desktop/loginPage/wwwroot/css/account.css",
+      "PackagePath": "staticwebassets/css/account.css"
+    },
+    {
       "Id": "/Users/user/Desktop/loginPage/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
