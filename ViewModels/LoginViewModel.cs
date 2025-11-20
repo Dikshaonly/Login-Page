@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace loginPage.ViewModels
 {
-    public class loginViewModels{
+    public class LoginViewModel{
         [Required(ErrorMessage = "Email is Required!")]
         [EmailAddress]
         public string Email{get; set;}
