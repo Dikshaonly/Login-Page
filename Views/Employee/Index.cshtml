@@ -1,0 +1,35 @@
+@using loginPage.Models;
+@{
+    ViewData["Title"] = "Employee";
+    Layout="~/Views/Shared/AccountLayout.cshtml";
+}
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<div class="account-container">
+<div class="account-box">
+<h2 class="text-center">Employee's Data:</h2>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Address</th>
+<th>Email</th>
+<th colspan="2">Actions</th>
+</tr>
+@foreach(var item in Model){
+    <tr>
+    <td>@item.eid</td>
+    <td>@item.name</td>
+    <td>@item.address</td>
+  <td>@item.email</td>
+  <td><a asp-controller="Employee" asp-action="Edit" class="text-decoration-none text-success">Edit</a></td>
+  <td><a asp-controller="Employee" asp-action="Create" class="text-decoration-none text-success">Add</a></td>
+</tr>
+}
+</table>
+</div>
+</div>

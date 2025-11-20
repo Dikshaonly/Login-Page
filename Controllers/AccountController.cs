@@ -22,10 +22,10 @@ namespace loginPage.Controllers{
                 var result=await signInManager.PasswordSignInAsync(model.Email,model.Password,model.RememberMe,false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Employee");
                 }
                 else{
-                   ModelState.AddModelError(" ","Email or Password Incorrect!");
+                   ModelState.AddModelError(string.Empty,"Email or Password Incorrect!");
                     return View(model);
                 }
             }
@@ -55,6 +55,11 @@ namespace loginPage.Controllers{
                 }
             }
             return View(model);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

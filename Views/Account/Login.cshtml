@@ -8,7 +8,6 @@
 <div class="account-box">
 <h2 class="text-center mb-4">Login</h2>
 <form asp-action="Login" method="post">
-<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <div class="mb-3">
 <label asp-for="Email" class="form-label"></label>
 <input asp-for="Email" class="form-control"/>
@@ -24,6 +23,7 @@
 <input asp-for="RememberMe" class="form-check-input">
 @Html.DisplayNameFor(a => a.RememberMe)
 </label>
+<div asp-validation-summary="All" class="text-danger"></div>
 </div>
 <input type="submit" value="Login" class="btn btn-success w-100 p-2">
 <p class="text-center mt-2">Don't have an account?
