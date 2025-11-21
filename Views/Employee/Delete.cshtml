@@ -1,11 +1,12 @@
 @using loginPage.ViewModels;
-@model EmployeeViewModel
+@model EmployeeViewModel;
 @{
     ViewData["Title"] = "Employee";
     Layout="~/Views/Shared/AccountLayout.cshtml";
 }
- <form asp-controller="Employee" asp-action="Create" method="post">
+ <form asp-action="Delete" method="post" asp-route-id="@Model.Eid">
 <div class="mb-3">
+<input type="hidden" asp-for="Eid">
 <label asp-for="Name" class="form-label"></label>
 <input asp-for="Name" class="form-control"/>
 <span asp-validation-for="Name" class="text-danger"></span>
@@ -20,9 +21,9 @@
 <input asp-for="Email" class="form-control"/>
 <span asp-validation-for="Email" class="text-danger"></span>
 </div>
-<input type="submit" value="Insert" class="btn btn-success w-100 p-2">
+<input type="submit" value="Delete" class="btn btn-success w-100 p-2">
 <div class="text-center mt-2">
-<a asp-controller="Employee" asp-action="Index" class="text-decoration-none mt-3">Back</a>
+<a asp-controller="Employee" asp-action="Index" class="text-decoration-none  btn btn-secondary w-100 p-2 mt-3">Cancel</a>
 </div>
 </form> 
 

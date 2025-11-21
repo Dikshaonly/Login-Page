@@ -27,10 +27,11 @@ table, th, td {
     <td>@item.address</td>
   <td>@item.email</td>
   <td><a asp-controller="Employee" asp-action="Edit" asp-route-id="@item.eid" class="text-decoration-none btn btn-primary">Edit</a></td>
-  <td><a asp-controller="Employee" asp-action="Details" class="text-decoration-none btn btn-primary">Details</a></td>
+  <td><a asp-controller="Employee" asp-action="Delete" asp-route-id="@item.eid" class="text-decoration-none btn btn-danger">Delete</a></td>
 </tr>
 }
 </table>
-  <td><a asp-controller="Employee" asp-action="Create" class="text-decoration-none btn btn-primary">Add Employee</a></td>
+  <a asp-controller="Employee" asp-action="Create" class="text-decoration-none text-center btn btn-primary">Add Employee</a>
+  <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-center btn btn-secondary">Back</a>
 </div>
 </div>

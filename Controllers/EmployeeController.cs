@@ -47,9 +47,8 @@ namespace loginPage.Controllers{
             };
             return View(model);
         }
-        
         [HttpPost]
-        public IActionResult Edit(int eid,EmployeeViewModel model){
+        public IActionResult Edit(int? eid,EmployeeViewModel model){
             if(eid!=model.Eid){
                 return NotFound();
             }
@@ -66,6 +65,34 @@ namespace loginPage.Controllers{
             return RedirectToAction("Index" , "Employee");
         }       
             return View(model);
+        }
+        public IActionResult Delete(int id){
+            var data=_context.employee.Find(id);
+            if(data==null){
+                return NotFound();
+            }
+            var model=new EmployeeViewModel{
+                Eid=data.eid,
+                Name=data.name,
+                Address=data.address,
+                Email=data.email,
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Delete(int eid, EmployeeViewModel model){
+            if(eid!=model.Eid){
+                return NotFound();
+            }
+            employee emp=new employee{
+                eid=model.Eid,
+                name=model.Name,
+                address=model.Address,
+                email=model.Email
+            };
+            _context.employee.Remove(emp);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Employee");
         }
     }
 }
