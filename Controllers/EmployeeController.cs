@@ -14,13 +14,25 @@ namespace loginPage.Controllers{
             var data = _context.employee.ToList();
             return View(data);
         }
-        public IActionResult Edit(int eid){
-            var data = _context.employee.Find(eid);
-            return View(data);
+        public IActionResult Edit(int id){
+            var data = _context.employee.Find(id);
+            if(data==null){
+                return NotFound();
+            }
+            var model=new EditViewModel{
+                Eid=data.eid,
+                Name=data.name,
+                Address=data.address,
+                Email=data.email,
+            };
+            return View(model);
         }
         
         [HttpPost]
-        public IActionResult Edit(EditViewModel model){
+        public IActionResult Edit(int eid,EditViewModel model){
+            if(eid!=model.Eid){
+                return NotFound();
+            }
         if (ModelState.IsValid)
         {
              employee emp=new employee{
