@@ -1,11 +1,12 @@
-@using loginPage.Models;
-@model employee;
+@using loginPage.ViewModels;
+@model EditViewModel;
 @{
     ViewData["Title"] = "Employee";
     Layout="~/Views/Shared/AccountLayout.cshtml";
 }
-<form asp-action="Edit" method="post">
+ <form asp-action="Edit" method="post">
 <div class="mb-3">
+<input type="hidden" asp-for="Eid">
 <label asp-for="Name" class="form-label"></label>
 <input asp-for="Name" class="form-control"/>
 <span asp-validation-for="Name" class="text-danger"></span>
@@ -24,4 +25,5 @@
 <div class="text-center mt-2">
 <a asp-controller="Employee" asp-action="Index" class="text-decoration-none mt-3">Back</a>
 </div>
-</form>
+</form> 
+

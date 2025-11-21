@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 namespace loginPage.ViewModels
 {
     public class EditViewModel{
+        public int Eid{get;set;}
         [Required]
         public string Name{get; set;}
         [Required]
