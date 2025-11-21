@@ -14,12 +14,32 @@ namespace loginPage.Controllers{
             var data = _context.employee.ToList();
             return View(data);
         }
+
+        public IActionResult Create(){
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(EmployeeViewModel model){
+            if (ModelState.IsValid)
+        {
+             employee emp=new employee{
+                    name = model.Name,
+                    address=model.Address,
+                    email=model.Email,
+                };
+            _context.employee.Add(emp);
+            _context.SaveChanges();
+            return RedirectToAction("Index" , "Employee");
+        }  
+        return View(model);    
+        }
+
         public IActionResult Edit(int id){
             var data = _context.employee.Find(id);
             if(data==null){
                 return NotFound();
             }
-            var model=new EditViewModel{
+            var model=new EmployeeViewModel{
                 Eid=data.eid,
                 Name=data.name,
                 Address=data.address,
@@ -29,7 +49,7 @@ namespace loginPage.Controllers{
         }
         
         [HttpPost]
-        public IActionResult Edit(int eid,EditViewModel model){
+        public IActionResult Edit(int eid,EmployeeViewModel model){
             if(eid!=model.Eid){
                 return NotFound();
             }
